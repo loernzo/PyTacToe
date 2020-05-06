@@ -29,25 +29,16 @@ def check (crosses: list, circles: list) -> int:
     coordinates=crosses
     winner=1
     for j in range(2):
-        count=0
         draw_count=0
 
-        for i in range(3):
-            if len(coordinates[i])==3:
-                return winner
-
-            if i in coordinates[0] and i in coordinates[1] and i in coordinates[2]:
                 return winner
 
                 return winner
 
-            for n in coordinates[i]:
-                if n+i+1==4:
-                    count+=1
-                if count==3:
+                return winner
+
                     return winner
 
-            draw_count+=len(coordinates[i])
             if draw_count==5:
                 return 0
         coordinates=circles
