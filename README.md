@@ -2,7 +2,7 @@
 Simple CLI multiplayer tictactoe game made in Python.
 
 # How to run?
-You probably already know, simply run the script in a shell. You can also use '''import pytactoe''' in a Python session.
+You probably already know, simply run the script in a shell. You can also use 'import pytactoe' in a Python session.
 
 # What is this game?
 In case you didn't understand, it's that famous silly little game you used to play with your deskmate when you were desperately bored at school. Yes, the one with crosses and circles
