@@ -29,44 +29,55 @@ def check (crosses: list, circles: list) -> int:
     coordinates=crosses
     winner=1
     for j in range(2):
-        count=0
+        count_1=0
+        count_2=0
         draw_count=0
 
-        for i in range(3):
-            if len(coordinates[i])==3:
+        for y in range(3):
+
+            #Horizontal tris check
+            if len(coordinates[y])==3:
                 return winner
 
-            if i in coordinates[0] and i in coordinates[1] and i in coordinates[2]:
+            #Vertical tris check
+            if y in coordinates[0] and y in coordinates[1] and y in coordinates[2]:
                 return winner
 
-            if i in coordinates[0] and i in coordinates[1] and i in coordinates[2]:
+            #Top-left bottom-right tris check
+            count_1+=1 if y+1 in coordinates[y] else 0
+            if count_1==3:
                 return winner
 
-            for n in coordinates[i]:
-                if n+i+1==4:
-                    count+=1
-                if count==3:
+            #Top-right bottom-left tris check
+            for n in coordinates[y]:
+                count_2+=1 if n+y+1==4 else 0
+                if count_2==3:
                     return winner
 
-            draw_count+=len(coordinates[i])
+            draw_count+=len(coordinates[y])
             if draw_count==5:
                 return 0
-                
+
         coordinates=circles
         winner=2
 
 def drawchart(crosses: list, circles: list)  -> str:
+    #draw top line
     chart='    x 1     2     3\ny\n'
     for y in range(3):
         chart+=str(y+1)
         line=[]
+
+        #merge lines from both players
         line[0:0]=crosses[y]
         line[0:0]=circles[y]
         line.sort()
         prev_x=0
         for x in line:
-            for blank in range(x-prev_x):
-                chart += '      ' if blank < x-prev_x-1 else '     '
+            #draw as many blank lines as many empty spots are present.
+            for blank in range(x-prev_x-1):
+                chart += '      '
+            chart += '     '
             prev_x=x
             chart+='x' if x in crosses[y] else 'o'
         chart+='\n\n'
@@ -106,14 +117,14 @@ def main():
         chart=drawchart(crosses, circles)
         print(chart)
 
-        result = check(crosses, circles)
-        if result==0:
+        winner = check(crosses, circles)
+        if winner==0:
             print('Draw!')
             exit()
-        elif result==1:
+        elif winner==1:
             print('Crosses won!')
             exit()
-        elif result==2:
+        elif winner==2:
             print('Circles won!')
             exit()
 
