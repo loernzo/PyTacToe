@@ -8,7 +8,7 @@ You probably already know, simply run the script in a shell. You can also use `i
 In case you didn't understand, it's that famous silly little game you used to play with your deskmate when you were desperately bored at school. Yes, the one with crosses and circles
 
 # How does it work?
-Marks are stored in 2 matrixes, one for each player. The sub-lists represent a line, so the y coordinates, and the numbers inside them represent the columns, so the x coordinates.
+Marks are stored in 2 matrixes, one for each player. The sub-lists represent a line, so the y coordinates, and the numbers inside them represent the columns, so the x coordinates. The script will automatically recognize and try to fix eventual user input errors
 
 There are four ways to win in tictactoe:
 ### Horizontal tris
