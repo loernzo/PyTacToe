@@ -1,5 +1,5 @@
 # PyTacToe
->Simple CLI multiplayer tictactoe game made in Python.
+>A simple CLI multiplayer tictactoe game made in Python.
 
 ## How to run?
 You probably already know, simply run the script in a shell. You can also use `import pytactoe` in a Python session.
