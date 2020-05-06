@@ -39,7 +39,6 @@ def check (crosses: list, circles: list) -> int:
             if i in coordinates[0] and i in coordinates[1] and i in coordinates[2]:
                 return winner
 
-            if i in coordinates[0] and i in coordinates[1] and i in coordinates[2]:
                 return winner
 
             for n in coordinates[i]:
@@ -51,7 +50,6 @@ def check (crosses: list, circles: list) -> int:
             draw_count+=len(coordinates[i])
             if draw_count==5:
                 return 0
-                
         coordinates=circles
         winner=2
 
@@ -65,8 +63,6 @@ def drawchart(crosses: list, circles: list)  -> str:
         line.sort()
         prev_x=0
         for x in line:
-            for blank in range(x-prev_x):
-                chart += '      ' if blank < x-prev_x-1 else '     '
             prev_x=x
             chart+='x' if x in crosses[y] else 'o'
         chart+='\n\n'
@@ -113,7 +109,6 @@ def main():
         elif result==1:
             print('Crosses won!')
             exit()
-        elif result==2:
             print('Circles won!')
             exit()
 
