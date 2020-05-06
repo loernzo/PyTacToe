@@ -93,11 +93,8 @@ def main():
         chart=drawchart(crosses, circles)
         print(chart)
 
-        result = check(crosses, circles)
-        if result==0:
             print('Draw!')
             exit()
-        elif result==1:
             print('Crosses won!')
             exit()
             print('Circles won!')
