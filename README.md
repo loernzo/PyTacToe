@@ -57,8 +57,10 @@ for i in range(3):
        ...
 ```
 
+
 # Why would I ever want to play this game?
 Because Fun™
+
 
 # Ok, but why wouldn't I just grab a piece of paper?
 I know you know.
