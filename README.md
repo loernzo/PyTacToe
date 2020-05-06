@@ -11,8 +11,8 @@ In case you didn't understand, it's that famous silly little game you used to pl
 Marks are stored in 2 matrixes, one for each player. The sub-lists represent a line, so the y coordinates, and the numbers inside them represent the columns, so the x coordinates.
 
 There are four ways to win in tictactoe:
-*      Horizontal tris
-       When you manage to do this tris, it means you placed 3 marks in a given line. So 3 x coordinates in a given y coordinate. That  also means the lenght of a given sub-list equals 3.
+### Horizontal tris
+When you manage to do this tris, it means you placed 3 marks in a given line. So 3 x coordinates in a given y coordinate. That  also means the lenght of a given sub-list equals 3.
 
 ```python
 for i in range(3):
@@ -21,8 +21,8 @@ for i in range(3):
        ...
 ```
 
-*      Vertical tris
-       This is the exact opposite: there are 3 marks in a given column. That means a certain number appears in all the three sub-lists. 
+### Vertical tris
+This is the exact opposite: there are 3 marks in a given column. That means a certain number appears in all the three sub-lists. 
 
 ```python
 for i in range(3):
@@ -32,8 +32,8 @@ for i in range(3):
        ...
 ```
 
-*      Top-left to bottom-right diagonal tris
-       When this occurs, it means that 3 coordinates couples have the same value(1-1, 2-2, 3-3)
+### Top-left to bottom-right diagonal tris
+When this occurs, it means that 3 coordinates couples have the same value(1-1, 2-2, 3-3)
 
 ```python
 for i in range(3):
@@ -43,8 +43,8 @@ for i in range(3):
        ...
 ```
 
-*      Top-right to bottom-left diagonal tris
-       Finally, this tris means that the sum between a given coordinates couple equals 4 for 3 times
+### Top-right to bottom-left diagonal tris
+Finally, this tris means that the sum between a given coordinates couple equals 4 for 3 times
 
 ```python
 for i in range(3):
