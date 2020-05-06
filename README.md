@@ -18,7 +18,7 @@ There are four ways to win in tictactoe:
 for i in range(3):
        if len(coordinates[i])==3:
            return winner
-            ...
+       ...
 ```
 
 *      Vertical tris
@@ -48,6 +48,7 @@ for i in range(3):
 
 ```python
 for i in range(3):
+       ...
        for n in coordinates[i]:
            if n+i+1==4:
                count+=1
