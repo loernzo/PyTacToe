@@ -63,4 +63,4 @@ Because Fun™
 
 
 # Ok, but why wouldn't I just grab a piece of paper?
-I know you know.
+You know I know you know.
