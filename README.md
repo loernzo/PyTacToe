@@ -8,8 +8,8 @@ You probably already know, simply run the script in a shell. You can also use `i
 In case you didn't understand, it's that famous silly little game you used to play with your deskmate when you were desperately bored at school. Yes, the one with crosses and circles
 
 ## How does it work?
-
-There are four ways to win in tictactoe:
+Marks are stored in 2 matrixes, one for each player. Every sub-list represents the y coordinates (lines) while the integer values represent the x coordinates (columns).
+There are 4 ways to win in tictactoe:
 ### Horizontal tris
 When you manage to do this tris, it means you placed 3 marks in a given line. So 3 x coordinates in a given y coordinate. That  also means the lenght of a given sub-list equals 3.
 
@@ -22,6 +22,7 @@ for y in range(3):
 ```
 
 ### Vertical tris
+This is the exact opposite. A vertical tris is achieved when a given x coordinate is matched on all 3 lines, meaning the same value is present in all 3 sub-lists.
 
 ```python
 #Vertical tris check
