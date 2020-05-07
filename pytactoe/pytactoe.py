@@ -41,7 +41,7 @@ def check(crosses: list, circles: list) -> int:
                 return winner
 
             # Vertical tris check
-            if y in coordinates[0] and y in coordinates[1] and y in coordinates[2]:
+            if y+1 in coordinates[0] and y+1 in coordinates[1] and y+1 in coordinates[2]:
                 return winner
 
             # Top-left bottom-right tris check
