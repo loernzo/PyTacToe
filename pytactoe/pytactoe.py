@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 def get_coordinates(turn: bool) -> int:
     player = 'Crosses' if turn else 'Circles'
     coordinates = input(player + ' (format: x, y): ')
