@@ -16,7 +16,7 @@ When you manage to do this tris, it means you placed 3 marks in a given line. So
 ```python
 #Horizontal tris check
 for y in range(3):
-        if len(coordinates[y])==3:
+        if len(coordinates[y]) == 3:
             return winner
        ...
 ```
@@ -40,9 +40,10 @@ When this occurs, it means that 3 coordinates couples have the same value(1-1, 2
 #Top-left bottom-right tris check
 for y in range(3):
       ...
-       count_1+=1 if y+1 in coordinates[y] else 0
-       if count_1==3:
+       count_1 += 1 if y+1 in coordinates[y] else 0
+       if count_1 == 3:
            return winner
+       ...
 ```
 
 ### Top-right to bottom-left diagonal tris
@@ -53,8 +54,8 @@ Finally, this tris means that the sum between a given coordinates couple equals 
 for y in range(3):
        ...
        for n in coordinates[y]:
-           count_2+=1 if n+y+1==4 else 0
-           if count_2==3:
+           count_2 += 1 if n+y+1==4 else 0
+           if count_2 == 3:
                return winner
        ...
 ```
